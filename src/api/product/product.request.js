@@ -1,7 +1,7 @@
 import { apiInstance } from "../apiInstance";
 
 export async function addProduct(requestData) {
-  const PATH = "/product/add";
+  const PATH = "/events";
   try {
     const res = await apiInstance.post(PATH, requestData);
     const apiRes = res.data;
@@ -12,7 +12,7 @@ export async function addProduct(requestData) {
 }
 
 export async function getProductById(productId) {
-  const PATH = `/product/get/${productId}`;
+  const PATH = `/events/${productId}`;
   try {
     const res = await apiInstance.get(PATH);
     const apiRes = res.data;
@@ -23,7 +23,7 @@ export async function getProductById(productId) {
 }
 
 export async function deleteProduct(productId) {
-  const PATH = `/product/delete/${productId}`;
+  const PATH = `/events/${productId}`;
   try {
     const res = await apiInstance.delete(PATH);
     const apiRes = res.data;
@@ -34,11 +34,10 @@ export async function deleteProduct(productId) {
 }
 
 export async function getAllProducts() {
-  const PATH = "/product/list";
+  const PATH = "/events";
   try {
     const res = await apiInstance.get(PATH);
-    const apiRes = res.data;
-    return apiRes.data;
+    return res.data;
   } catch (e) {
     throw e.name;
   }
