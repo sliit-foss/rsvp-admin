@@ -40,8 +40,48 @@ function ProductViewModal({ isOpen, onClose, product }) {
                 </TableRow>
 
                 <TableRow>
-                  <TableCell>Tags</TableCell>
-                  <TableCell>{product?.tags}</TableCell>
+                  <TableCell>headerImage</TableCell>
+                  <TableCell>{product?.headerImage}</TableCell>
+                </TableRow>
+
+                <TableRow>
+                  <TableCell>photos</TableCell>
+                  <TableCell>{product?.photos}</TableCell>
+                </TableRow>
+
+                <TableRow>
+                  <TableCell>venue</TableCell>
+                  <TableCell>{product?.venue}</TableCell>
+                </TableRow>
+
+                <TableRow>
+                  <TableCell>fromDate</TableCell>
+                  <TableCell>{product?.fromDate}</TableCell>
+                </TableRow>
+
+                <TableRow>
+                  <TableCell>toDate</TableCell>
+                  <TableCell>{product?.toDate}</TableCell>
+                </TableRow>
+
+                <TableRow>
+                  <TableCell>status</TableCell>
+                  <TableCell>{product?.status}</TableCell>
+                </TableRow>
+
+                <TableRow>
+                  <TableCell>speakers</TableCell>
+                  <TableCell>{product?.speakers}</TableCell>
+                </TableRow>
+
+                <TableRow>
+                  <TableCell>createdBy</TableCell>
+                  <TableCell>{product?.createdBy}</TableCell>
+                </TableRow>
+
+                <TableRow>
+                  <TableCell>host</TableCell>
+                  <TableCell>{product?.host}</TableCell>
                 </TableRow>
 
                 <TableRow>
