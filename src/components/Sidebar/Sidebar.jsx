@@ -142,9 +142,9 @@ const SideBar = () => {
             {/*  />*/}
             {/*</li>*/}
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to="/login" className="nav-link">
                 <i className="nav-icon fa fa-sign-out" />
-                <p>Logout</p>
+                <p>Login</p>
               </Link>
               <hr
                 style={{
