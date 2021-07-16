@@ -10,7 +10,7 @@ import Loginpage from "./pages/Login";
 export const routes = [
   { path: "/", component: Home },
   // { path: "/category", component: Category },
-  { path: "/product", component: ProductPage },
+  { path: "/event", component: ProductPage },
   // { path: "/promo-code", component: PromoCodePage },
   // { path: "/orders", component: Order },
   // { path: "/order/:id", component: OrderDetails },

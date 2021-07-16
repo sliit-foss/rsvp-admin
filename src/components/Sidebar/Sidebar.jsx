@@ -78,7 +78,7 @@ const SideBar = () => {
             {/*  />*/}
             {/*</li>*/}
             <li className="nav-item">
-              <Link to="/product" className="nav-link">
+              <Link to="/event" className="nav-link">
                 <i className="nav-icon fa fa-shopping-bag" />
                 <p>Manage Events</p>
               </Link>

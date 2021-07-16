@@ -8,7 +8,7 @@ import VisibilityIcon from "@material-ui/icons/Visibility";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { useMutation } from "react-query";
-import { deleteProduct } from "../../../api/product/product.request";
+import { deleteEvent } from "../../../api/event/event.request";
 import { useToast } from "../../../hooks/useToast";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ConfirmationDialog from "../../Common/ConfirmationDialog/ConfirmationDialog";
@@ -35,7 +35,7 @@ function EventTableAction({ product }) {
     setDeleteDialog(true);
   };
 
-  const [remove, { status: removeStatus }] = useMutation(deleteProduct, {
+  const [remove, { status: removeStatus }] = useMutation(deleteEvent, {
     onError() {
       displayToast(`Event ${product?.name} remove failed`, "default");
     },

@@ -1,10 +1,10 @@
 import { queryCache, useQuery } from "react-query";
-import { getAllProducts, getProductById } from "../api/product/product.request";
+import { getAllEvent, getEventById } from "../api/event/event.request";
 
 const PRODUCT_LIST = "PRODUCT_LIST";
 
 export function useGetProducts() {
-  return useQuery(PRODUCT_LIST, getAllProducts);
+  return useQuery(PRODUCT_LIST, getAllEvent);
 }
 
 export function refetchProducts() {
@@ -12,7 +12,7 @@ export function refetchProducts() {
 }
 
 export function useGetProductById(id) {
-  return useQuery(["SELECTED_PRODUCT", id], getProductById(id));
+  return useQuery(["SELECTED_PRODUCT", id], getEventById(id));
 }
 
 // const PRODUCT_SUB_CATEGORY_LIST = "PRODUCT_SUB_CATEGORY_LIST";

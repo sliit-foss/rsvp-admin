@@ -1,13 +1,13 @@
 import React from "react";
 import { useMutation } from "react-query";
-import { addProduct } from "../../../api/product/product.request";
+import { addEvent } from "../../../api/event/event.request";
 import FormDrawer from "../../Common/FormDrawer/FormDrawer";
 import { Grid, TextField } from "@material-ui/core";
 import { useForm } from "react-hook-form";
 
 function EventAddDrawer({ closeModal, refetchData }) {
   const { handleSubmit, register } = useForm();
-  const [onSubmit, { status }] = useMutation(addProduct, {
+  const [onSubmit, { status }] = useMutation(addEvent, {
     onError() {},
     onSuccess() {
       closeModal();
@@ -18,7 +18,7 @@ function EventAddDrawer({ closeModal, refetchData }) {
   return (
     <>
       <FormDrawer
-        title={"Add new product"}
+        title={"Add new event"}
         isLoading={status === "loading"}
         width={350}
       >
