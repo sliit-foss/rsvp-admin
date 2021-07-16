@@ -14,8 +14,8 @@ interface ImageProps {
 const NextImage = ({
   src,
   alt,
-  quality,
-  layout,
+  // quality,
+  // layout,
   width,
   height,
   placeholder,
