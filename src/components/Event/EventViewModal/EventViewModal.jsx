@@ -10,7 +10,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-function ProductViewModal({ isOpen, onClose, product }) {
+function EventViewModal({ isOpen, onClose, product }) {
   return (
     <>
       <Dialog
@@ -109,4 +109,4 @@ function ProductViewModal({ isOpen, onClose, product }) {
   );
 }
 
-export default ProductViewModal;
+export default EventViewModal;

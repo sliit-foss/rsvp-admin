@@ -80,7 +80,7 @@ const SideBar = () => {
             <li className="nav-item">
               <Link to="/product" className="nav-link">
                 <i className="nav-icon fa fa-shopping-bag" />
-                <p>Manage Products</p>
+                <p>Manage Events</p>
               </Link>
               <hr
                 style={{

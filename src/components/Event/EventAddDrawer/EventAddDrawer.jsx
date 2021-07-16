@@ -5,7 +5,7 @@ import FormDrawer from "../../Common/FormDrawer/FormDrawer";
 import { Grid, TextField } from "@material-ui/core";
 import { useForm } from "react-hook-form";
 
-function ProductAddDrawer({ closeModal, refetchData }) {
+function EventAddDrawer({ closeModal, refetchData }) {
   const { handleSubmit, register } = useForm();
   const [onSubmit, { status }] = useMutation(addProduct, {
     onError() {},
@@ -193,4 +193,4 @@ function ProductAddDrawer({ closeModal, refetchData }) {
   );
 }
 
-export default ProductAddDrawer;
+export default EventAddDrawer;

@@ -8,13 +8,13 @@ import {
   Grid,
 } from "@material-ui/core";
 import { Alert } from "@material-ui/lab";
-import ProductTable from "../components/Product/ProductTable/ProductTable";
+import EventTable from "../components/Event/EventTable/EventTable";
 import SearchIcon from "@material-ui/icons/Search";
 import { TableSearchInput } from "../components/Common/TableViewComponents/TableSearchInput";
 import AddIcon from "@material-ui/icons/Add";
-import ProductAddDrawer from "../components/Product/ProductAddDrawer/ProductAddDrawer";
+import EventAddDrawer from "../components/Event/EventAddDrawer/EventAddDrawer";
 
-const ProductPage = () => {
+const EventPage = () => {
   const [searchText, setSearchText] = useState("");
   const [isDrawerOpen, toggleDrawer] = useState(false);
 
@@ -31,7 +31,7 @@ const ProductPage = () => {
     <>
       <div className="content-wrapper">
         <div className="container-fluid">
-          <h4>Manage Products</h4>
+          <h4>Manage Events</h4>
 
           <Grid container spacing={2} className={"mb-3 mt-3"}>
             <Grid item xs={1} />
@@ -44,7 +44,7 @@ const ProductPage = () => {
                 className="btn btn-primary"
                 onClick={() => toggleDrawer(true)}
               >
-                <AddIcon /> New Product
+                <AddIcon /> New Event
               </button>
             </Grid>
           </Grid>
@@ -56,13 +56,13 @@ const ProductPage = () => {
               <Toolbar style={{ paddingLeft: 0 }}>
                 <div className="container">
                   {status === "error" && (
-                    <Alert severity="error">Error loading Product Data</Alert>
+                    <Alert severity="error">Error loading Event Data</Alert>
                   )}
                   {noData && (
-                    <Alert severity="info">You have no saved products.</Alert>
+                    <Alert severity="info">You have no saved Events.</Alert>
                   )}
                   {hasData && (
-                    <ProductTable products={data} searchVal={searchText} />
+                    <EventTable Events={data} searchVal={searchText} />
                   )}
                 </div>
               </Toolbar>
@@ -72,7 +72,7 @@ const ProductPage = () => {
       </div>
 
       {isDrawerOpen && (
-        <ProductAddDrawer
+        <EventAddDrawer
           closeModal={modalClose}
           refetchData={async () => {
             await refetchProducts();
@@ -83,4 +83,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default EventPage;

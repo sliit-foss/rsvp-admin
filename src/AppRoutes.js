@@ -1,6 +1,6 @@
 import Home from "./components/Home/Home";
 import Category from "./components/Categories/Category";
-import ProductPage from "./pages/ProductPage";
+import ProductPage from "./pages/EventPage";
 import PromoCodePage from "./pages/PromoCodePage";
 import Order from "./components/Order/Order";
 import OrderDetails from "./components/Order/OrderDetails";

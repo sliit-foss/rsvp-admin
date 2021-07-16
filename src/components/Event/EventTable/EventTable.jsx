@@ -8,7 +8,7 @@ import {
   TableBody,
   Chip,
 } from "@material-ui/core";
-import ProductTableAction from "./ProductTableAction";
+import EventTableAction from "./EventTableAction";
 import { useFilterRows } from "../../Common/TableViewComponents/useFilterData";
 import Alert from "@material-ui/lab/Alert";
 import { TableFooterPagination } from "../../Common/TableViewComponents/TableFooterPagination";
@@ -22,10 +22,10 @@ function filterData(tableData, searchText = "") {
   );
 }
 
-const ProductTable = ({ products, searchVal }) => {
+const EventTable = ({ Events, searchVal }) => {
   const { pageData, tableFooterProps, noMatchingItems } = useFilterRows(
     searchVal,
-    products,
+    Events,
     filterData
   );
 
@@ -78,7 +78,7 @@ const ProductTable = ({ products, searchVal }) => {
                 </TableCell>
                 <TableCell style={{ width: "5rem" }}>
                   <div className="display-flex align-center justify-end">
-                    <ProductTableAction product={p} />
+                    <EventTableAction Event={p} />
                   </div>
                 </TableCell>
               </TableRow>
@@ -87,11 +87,11 @@ const ProductTable = ({ products, searchVal }) => {
         </Table>
       </TableContainer>
 
-      {noMatchingItems && <Alert severity="info">No matching Products</Alert>}
+      {noMatchingItems && <Alert severity="info">No matching Events</Alert>}
 
       <TableFooterPagination {...tableFooterProps} />
     </>
   );
 };
 
-export default ProductTable;
+export default EventTable;
