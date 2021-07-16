@@ -28,7 +28,7 @@ function ProductAddDrawer({ closeModal, refetchData }) {
             <Grid item xs={12}>
               <div className="form-group">
                 <TextField
-                  label={"Product Name"}
+                  label={"name"}
                   variant={"outlined"}
                   size={"small"}
                   fullWidth
@@ -41,11 +41,137 @@ function ProductAddDrawer({ closeModal, refetchData }) {
             <Grid item xs={12}>
               <div className="form-group">
                 <TextField
-                  label={"Product Description"}
+                  label={"description"}
                   variant={"outlined"}
                   size={"small"}
                   fullWidth
                   name={"description"}
+                  rows={3}
+                  ref={register}
+                />
+              </div>
+            </Grid>
+
+            <Grid item xs={12}>
+              <div className="form-group">
+                <TextField
+                  label={"headerImage"}
+                  variant={"outlined"}
+                  size={"small"}
+                  fullWidth
+                  name={"headerImage"}
+                  rows={3}
+                  ref={register}
+                />
+              </div>
+            </Grid>
+
+            <Grid item xs={12}>
+              <div className="form-group">
+                <TextField
+                  label={"photos"}
+                  variant={"outlined"}
+                  size={"small"}
+                  fullWidth
+                  name={"photos"}
+                  rows={3}
+                  ref={register}
+                />
+              </div>
+            </Grid>
+
+            <Grid item xs={12}>
+              <div className="form-group">
+                <TextField
+                  label={"venue"}
+                  variant={"outlined"}
+                  size={"small"}
+                  fullWidth
+                  name={"venue"}
+                  rows={3}
+                  ref={register}
+                />
+              </div>
+            </Grid>
+
+            <Grid item xs={12}>
+              <div className="form-group">
+                <TextField
+                  label={"fromDate"}
+                  variant={"outlined"}
+                  size={"small"}
+                  fullWidth
+                  name={"fromDate"}
+                  rows={3}
+                  ref={register}
+                />
+              </div>
+            </Grid>
+
+            <Grid item xs={12}>
+              <div className="form-group">
+                <TextField
+                  label={"toDate"}
+                  variant={"outlined"}
+                  size={"small"}
+                  fullWidth
+                  name={"toDate"}
+                  rows={3}
+                  ref={register}
+                />
+              </div>
+            </Grid>
+
+            <Grid item xs={12}>
+              <div className="form-group">
+                <TextField
+                  label={"status"}
+                  variant={"outlined"}
+                  size={"small"}
+                  fullWidth
+                  name={"status"}
+                  rows={3}
+                  ref={register}
+                />
+              </div>
+            </Grid>
+
+            <Grid item xs={12}>
+              <div className="form-group">
+                <TextField
+                  label={"speakers"}
+                  variant={"outlined"}
+                  size={"small"}
+                  fullWidth
+                  name={"speakers"}
+                  rows={3}
+                  ref={register}
+                />
+              </div>
+            </Grid>
+
+            <Grid item xs={12}>
+              <div className="form-group">
+                <TextField
+                  label={"createdBy"}
+                  variant={"outlined"}
+                  size={"small"}
+                  fullWidth
+                  name={"createdBy"}
+                  rows={3}
+                  ref={register}
+                />
+              </div>
+            </Grid>
+
+            <Grid item xs={12}>
+              <div className="form-group">
+                <TextField
+                  label={"host"}
+                  variant={"outlined"}
+                  size={"small"}
+                  fullWidth
+                  name={"host"}
                   rows={3}
                   ref={register}
                 />
@@ -56,7 +182,7 @@ function ProductAddDrawer({ closeModal, refetchData }) {
           <div>
             <button className="btn btn-primary" type={"submit"}>
               Save
-            </button>{" "}
+            </button>
             <button onClick={closeModal} className="btn btn-secondary">
               Cancel
             </button>
