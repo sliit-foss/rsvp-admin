@@ -3,7 +3,11 @@ import { apiInstance } from "../apiInstance";
 export async function addProduct(requestData) {
   const PATH = "/events";
   try {
-    const res = await apiInstance.post(PATH, requestData);
+    const res = await apiInstance.post(PATH, requestData, {
+      headers: {
+        Authorization: window.localStorage.getItem("Token")
+      }
+    });
     const apiRes = res.data;
     return apiRes.success;
   } catch (e) {
