@@ -5,19 +5,35 @@
     "node": true
   },
   "extends": "eslint:recommended",
-  "plugins": ["react"],
+  "plugins": [
+    "react"
+  ],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
     "no-unused-vars": "warn",
     "no-unused-expressions": 1,
-    "quotes": [1, "double"],
-    "no-console": "error",
+    "quotes": [
+      1,
+      "double"
+    ],
+    "no-console": "off",
     "react/jsx-uses-vars": "error",
     "react/jsx-uses-react": "error"
+  },
+  "globals": {
+    "JSX": true
   }
 }

@@ -1,28 +1,28 @@
-import { useState } from 'react'
-import { Controller, useForm } from 'react-hook-form'
+import { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
 
 interface props {
-  onSubmit: any
+  onSubmit: any;
 }
 
 const SignUpFormFields = ({ onSubmit }: props): JSX.Element => {
   const inputfieldClasses =
-    'shadow-ds2 mt-4 border-none text-xs font-semibold h-10'
+    "shadow-ds2 mt-4 border-none text-xs font-semibold h-10";
 
-  const [password, setPassword] = useState('')
-  const [passwordMatch, setPasswordMatch] = useState(true)
-  const { handleSubmit, control } = useForm()
+  const [password, setPassword] = useState("");
+  const [passwordMatch, setPasswordMatch] = useState(true);
+  const { handleSubmit, control } = useForm();
 
   const passwordCheck = (confirmPassword: string) => {
-    const valid = password === confirmPassword
-    setPasswordMatch(valid)
-    return valid
-  }
+    const valid = password === confirmPassword;
+    setPasswordMatch(valid);
+    return valid;
+  };
 
   const handlePasswordChange = (password: string) => {
-    setPassword(password)
-    return true
-  }
+    setPassword(password);
+    return true;
+  };
 
   return (
     <form
@@ -43,7 +43,7 @@ const SignUpFormFields = ({ onSubmit }: props): JSX.Element => {
         name="username"
         autoComplete="name"
         autoFocus
-        size={'small'}
+        size={"small"}
         defaultValue=""
       />
       <Controller
@@ -59,7 +59,7 @@ const SignUpFormFields = ({ onSubmit }: props): JSX.Element => {
         name="email"
         autoComplete="email"
         autoFocus
-        size={'small'}
+        size={"small"}
         defaultValue=""
       />
       <Controller
@@ -70,8 +70,8 @@ const SignUpFormFields = ({ onSubmit }: props): JSX.Element => {
             className={inputfieldClasses}
             style={
               passwordMatch
-                ? { border: '1px solid #ffffff00' }
-                : { border: '1px solid #ff0022' }
+                ? { border: "1px solid #ffffff00" }
+                : { border: "1px solid #ff0022" }
             }
           />
         }
@@ -80,7 +80,7 @@ const SignUpFormFields = ({ onSubmit }: props): JSX.Element => {
         name="password"
         type="password"
         autoComplete="current-password"
-        size={'small'}
+        size={"small"}
         defaultValue=""
         rules={{ required: true, validate: handlePasswordChange }}
       />
@@ -93,8 +93,8 @@ const SignUpFormFields = ({ onSubmit }: props): JSX.Element => {
             className={inputfieldClasses}
             style={
               passwordMatch
-                ? { border: '1px solid #ffffff00' }
-                : { border: '1px solid #ff0022' }
+                ? { border: "1px solid #ffffff00" }
+                : { border: "1px solid #ff0022" }
             }
           />
         }
@@ -104,12 +104,12 @@ const SignUpFormFields = ({ onSubmit }: props): JSX.Element => {
         name="confirmPassword"
         type="password"
         autoComplete="current-password"
-        size={'small'}
+        size={"small"}
         defaultValue=""
         rules={{ required: true, validate: passwordCheck }}
       />
     </form>
-  )
-}
+  );
+};
 
-export default SignUpFormFields
+export default SignUpFormFields;
